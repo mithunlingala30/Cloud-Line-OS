@@ -61,29 +61,29 @@
 ```mermaid
 graph TD
     subgraph Client ["Client Tier (React 19 + Vite)"]
-        UI[Glassmorphic UI / Tailwind & CSS Tokens]
-        CM[CodeMirror Editor + Syntax Highlighters]
-        AuthClient[Firebase Auth SDK]
-        Store[LocalStorage State & Cache]
-        Fallback[3-Tier Resilient Fetch Layer]
+        UI["Glassmorphic UI / Tailwind & CSS Tokens"]
+        CM["CodeMirror Editor + Syntax Highlighters"]
+        AuthClient["Firebase Auth SDK"]
+        Store["LocalStorage State & Cache"]
+        Fallback["3-Tier Resilient Fetch Layer"]
     end
 
     subgraph Backend ["Server Tier (FastAPI + Uvicorn)"]
-        API[FastAPI REST Router]
-        Pydantic[Pydantic v2 Schema Validator]
-        LangConfig[Language Registry & Normalizers]
-        Executor[Subprocess Execution Engine]
+        API["FastAPI REST Router"]
+        Pydantic["Pydantic v2 Schema Validator"]
+        LangConfig["Language Registry & Normalizers"]
+        Executor["Subprocess Execution Engine"]
     end
 
     subgraph Sandbox ["Execution Sandbox"]
-        Proc[Isolated Subprocess]
-        Limits[CPU & Memory Budgets (RLIMIT)]
+        Proc["Isolated Subprocess"]
+        Limits["CPU & Memory Budgets (RLIMIT)"]
         Compilers["GCC / G++ / Javac / Python Runtime"]
     end
 
     subgraph Cloud ["Persistence Layer (Firebase Firestore)"]
-        FS_Problems[Problems Collection]
-        FS_Submissions[Submissions Collection]
+        FS_Problems["Problems Collection"]
+        FS_Submissions["Submissions Collection"]
     end
 
     UI --> CM
