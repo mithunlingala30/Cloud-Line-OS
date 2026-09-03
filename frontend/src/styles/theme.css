@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color tokens */
+  --ink: #16233d;
+  --ink-soft: #4a5875;
+  --sky-top: #eaf3ff;
+  --sky-bottom: #ffffff;
+  --cloud-white: #ffffff;
+  --cloud-tint: #f3f8ff;
+  --border-soft: #dce8fb;
+  --accent: #4c7df5;
+  --accent-dark: #2f5fd6;
+  --accent-tint: #e4edff;
+  --sun: #ffb454;
+  --sun-tint: #fff3e0;
+  --storm: #8b7fe8;
+  --storm-tint: #ede9ff;
+  --thunder: #ff6b6b;
+  --thunder-tint: #ffe8e8;
+  --success: #2fbf8f;
+  --success-tint: #e2f8f0;
+
+  /* Type */
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --shadow-cloud: 0 10px 30px -8px rgba(76, 125, 245, 0.18), 0 2px 8px rgba(22, 35, 61, 0.06);
+  --shadow-cloud-hover: 0 16px 40px -10px rgba(76, 125, 245, 0.28), 0 4px 12px rgba(22, 35, 61, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 55%);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: var(--accent-tint);
+  color: var(--accent-dark);
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
